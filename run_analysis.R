@@ -53,14 +53,6 @@
 ## result: [1] 150  88
 > head(DF5) [1:5]
 ## the result was ok:
-  subject           Activity tBodyAcc-mean()-X tBodyAcc-mean()-Y tBodyAcc-mean()-Z
-1       1             LAYING         0.2215982      -0.040513953        -0.1132036
-2       1            SITTING         0.2706080      -0.009167818        -0.1077547
-3       1            WALKING         0.2773308      -0.017383819        -0.1111481
-4       1 WALKING_DOWNSTAIRS         0.2891883      -0.009918505        -0.1075662
-5       1   WALKING_UPSTAIRS         0.2554617      -0.023953149        -0.0973020
-6       2             LAYING         0.2813734      -0.018158740        -0.1072456
-
 ## And in the end I saved this new tidy data
 > write.table(DF5, file = "DF5", sep = " ", row.names = FALSE)
 ## The end. Cheers!
