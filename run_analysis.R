@@ -1,5 +1,5 @@
 ## Hello! Thank you for revewing my work.
-## First I read in R all the files I thought I will need. 
+## First I read in R all the files that I thought I will need. 
 ## Every time I made sure I am in the correct working directory. 
 > x_test<-read.table("X_test.txt")
 > y_test<-read.table("y_test.txt")
@@ -8,7 +8,8 @@
 > y_train<-read.table("y_train.txt")
 > subject_train<-read.table("subject_train.txt")
 > features<-read.table("features.txt")
-## Used a lot of dim() and str() and head() at all steps to see the dimension for all this data.
+## Used a lot of dim() and str() and head() at all steps to see 
+## the dimension for all this data.
 ## Then I rbind() -ed tests with trains, for x, y and subjects
 > x<-rbind(x_test, x_train)
 > y<-rbind(y_test, y_train)
@@ -23,11 +24,12 @@
 > DF<-cbind(xy,subject)
 > colnames(DF)[563] <-"subject"
 ## when checked for head(DF) didn't like how it looked. 
-## I thought that the subject and activity would look better at the begining of the table. 
-## So went reordering the columns 
+## I thought that the subject and activity would look better 
+## at the begining of the table. So went reordering the columns 
 ## (googled how to do it, bien sur)
 > DF1<-DF[,c(563,562,1:561)]
-## Then I thought that it would be nice to have the name of the activity instead of its number, 
+## Then I thought that it would be nice to have the name of the activity 
+## instead of its number, 
 ## and it is also the 3rd task 
 > DF1$Activity[DF1$Activity == "1"]<-"WALKING"
 > DF1$Activity[DF1$Activity == "5"]<-"STANDING"  ## 5 was in the head(DF1$Activity) si I could check
@@ -62,6 +64,10 @@
 ## And in the end I saved this new tidy data
 > write.table(DF5, file = "DF5", sep = " ", row.names = FALSE)
 ## The end. Cheers!
+
+
+
+
 
 
 
